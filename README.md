@@ -1,30 +1,55 @@
-# Python on Replit
+# Marketplais  
+A full-stack marketplace platform developed by Fahim A. Islam  
+GitHub: [github.com/FahimIslam731/Marketplais](https://github.com/FahimIslam731/Marketplais)
 
-This is a template to get you started with Python on Replit. It's ready to go so you can just hit run and start coding!
+---
 
-## Running the repl
+## Project Overview  
+**Marketplais** is a web-based marketplace system built end-to-end, showcasing a production-style architecture combining backend, frontend, authentication, and data management. It was developed to demonstrate full-lifecycle software engineering skills—from database design and server APIs to user interface and deployment tooling.
 
-1. Setup a new secret environment variable (the lock icon) where the key is `SECRET_KEY` and the value is
-   a randomly generated token of 32 bits of randomnese. To generate such a token type this into the shell and hit Enter:
+Key aspects:  
+- Built using Django (Python) for the backend, serving RESTful endpoints and handling business logic.  
+- Persistent data storage with SQLite (for ease of setup) and designed with modular data models for extensibility.  
+- User authentication, listing management (create/read/update/delete items), shopping workflow (browse, purchase, manage orders).  
+- Front-end interface (HTML/CSS/JavaScript) integrated with backend APIs, providing responsive UI for users and administrators.  
+- Project organized with environment management (via Poetry), version control, and modular app structure.
+
+---
+
+## Features  
+- User registration & login with secure session handling.  
+- Item listing: users can upload items with descriptions, images, pricing, categories.  
+- Browsing interface: search, filter, and sort items by category, price, etc.  
+- Shopping cart & order processing workflow.  
+- Admin dashboard: monitor listings, users, orders.  
+- Media handling: image uploads and storage.  
+- Clean project structure: `django_project/`, `core/`, `dashboard/`, `item/`, `media/`, and more.  
+- Deployable via Replit with minimal configuration (for demonstration).
+
+---
+
+## Tech Stack  
+- Backend: Python3, Django Web Framework  
+- Frontend: HTML5, CSS3, JavaScript (vanilla)  
+- Database: SQLite (for demo; production-ready design)  
+- Dependency management: Poetry (`pyproject.toml`, `poetry.lock`)  
+- Hosting/Deployment: Replit (with `replit.nix`)  
+- Version control: Git, GitHub  
+- Additional: Media uploads, Django static/media config, modular app architecture.
+
+---
+
+## Project Structure  
+```text
+Marketplais/
+├─ django_project/        # Django settings, URL config, WSGI/ASGI entry
+├─ core/                  # Core app: common utilities, base models, helpers
+├─ dashboard/             # Admin-style dashboard app for user/item/order oversight
+├─ item/                  # Marketplace items: listing model, views, templates
+├─ media/                 # Uploaded media (images) directory
+├─ manage.py              # Django management script
+├─ pyproject.toml         # Poetry project config
+├─ poetry.lock            # Locked dependencies
+├─ README.md              # This file
+└─ …other files and folders
 ```
-python
-import secrets
-secrets.token_urlsafe(32)
-```
-2. Hit run!
-
-See this 1 minute video for a walkthrough: [https://www.loom.com/share/ecc4e738149f4d1db3bcff01758b3e71](https://www.loom.com/share/341b5574d12040fb9fcbbff150777f1c)
-
-## Installing packages
-
-To add packages to your repl, you can just import directly in the file you want to use the package in, and it will automatically be installed when you press the run button. Like below:
-```python
-import math
-import pandas as pd
-```
-
-You could also install packages by using the Replit packager interface in the left sidebar.
-
-## Help
-
-If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support).
